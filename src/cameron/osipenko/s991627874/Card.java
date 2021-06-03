@@ -1,4 +1,4 @@
-package pickacard;
+package cameron.osipenko.s991627874;
 
 /**
  * A class that models playing card Objects. Cards have a value (note that Ace =

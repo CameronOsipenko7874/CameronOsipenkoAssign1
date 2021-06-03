@@ -1,4 +1,4 @@
-package pickacard;
+package cameron.osipenko.s991627874;
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects and then
