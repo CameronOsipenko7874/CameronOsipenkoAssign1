@@ -34,6 +34,8 @@ public class CardTrick {
             c.setSuit(Card.SUITS[r.nextInt(3)]);
 
             magicHand[i] = c;
+            magicHand[0].setSuit("Hearts");
+            magicHand[0].setValue(2);
             System.out.println(magicHand[i].getValue() + " of " + magicHand[i].getSuit());
         }
 
@@ -43,6 +45,16 @@ public class CardTrick {
 
         System.out.println("Pick the suit (\"Hearts\"," + " \"Diamonds\", \"Spades\", \"Clubs\"): ");
         String suit = input.next();
+
+        for (int i = 0; i < magicHand.length; i++) {
+            if (value == magicHand[i].getValue()) {
+                if (suit.equals(magicHand[i].getSuit())) {
+                    System.out.println("Your card is in the hand!");
+                }
+            } else {
+                System.out.println("The card is not present.");
+            }
+        }
 
         // insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
