@@ -22,10 +22,10 @@ public class CardTrick {
         Random r = new Random();
         Card[] magicHand = new Card[7];
         Scanner input = new Scanner(System.in);
-        
+
         Card luckyCard = new Card();
-        luckyCard.setValue = 4;
-        luckyCard.setSuit = "Spades";
+        luckyCard.setValue(4);
+        luckyCard.setSuit("Spades");
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
@@ -40,28 +40,32 @@ public class CardTrick {
             magicHand[i] = c;
         }
 
-        System.out.println("Pick a card! (\"any card\")");
-        System.out.println("Pick the value (1-13):");
-        int value = input.nextInt();
-
-        System.out.println("Pick the suit (\"Hearts\"," + " \"Diamonds\", \"Spades\", \"Clubs\"): ");
-        String suit = input.next();
-
         for (int i = 0; i < magicHand.length; i++) {
-            if (value == magicHand[i].getValue()) {
-                if (suit.equals(magicHand[i].getSuit())) {
-                    System.out.println("Your card is in the hand!");
-                }
-            } else {
-                System.out.println("The card is not present.");
+            if (luckyCard.getSuit().equals(magicHand[i].getSuit()) && luckyCard.getValue() == magicHand[i].getValue()) {
+                System.out.println("You win!");
             }
         }
 
+        // System.out.println("Pick a card! (\"any card\")");
+        // System.out.println("Pick the value (1-13):");
+        // int value = input.nextInt();
+
+        // System.out.println("Pick the suit (\"Hearts\"," + " \"Diamonds\", \"Spades\",
+        // \"Clubs\"): ");
+        // String suit = input.next();
+
+        // for (int i = 0; i < magicHand.length; i++) {
+        // if (value == magicHand[i].getValue()) {
+        // if (suit.equals(magicHand[i].getSuit())) {
+        // System.out.println("Your card is in the hand!");
+        // }
+        // } else {
+        // System.out.println("The card is not present.");
+        // }
+        // }
+
         input.close();
 
-        // insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        // Then report the result here
     }
 
 }
