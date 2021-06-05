@@ -10,15 +10,22 @@ package cameron.osipenko.s991627874;
  * @author Cameron Osipenko
  * @date June 2, 2021
  */
+
+import java.util.Random;
+
 public class CardTrick {
 
     public static void main(String[] args) {
 
+        // creates a new random for randomized hand generation
+        Random r = new Random();
         Card[] magicHand = new Card[7];
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
             // c.setValue(insert call to random number generator here)
+            c.setValue(r.nextInt(13) + 1);
+            c.setSuit(Card.SUITS[r.nextInt(3)]);
             // c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         }
 
