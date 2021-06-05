@@ -12,6 +12,7 @@ package cameron.osipenko.s991627874;
  */
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class CardTrick {
 
@@ -20,6 +21,7 @@ public class CardTrick {
         // creates a new random for randomized hand generation
         Random r = new Random();
         Card[] magicHand = new Card[7];
+        Scanner input = new Scanner(System.in);
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
@@ -34,6 +36,13 @@ public class CardTrick {
             magicHand[i] = c;
             System.out.println(magicHand[i].getValue() + " of " + magicHand[i].getSuit());
         }
+
+        System.out.println("Pick a card! (\"any card\")");
+        System.out.println("Pick the value (1-13):");
+        int value = input.nextInt();
+
+        System.out.println("Pick the suit (\"Hearts\"," + " \"Diamonds\", \"Spades\", \"Clubs\"): ");
+        String suit = input.next();
 
         // insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
