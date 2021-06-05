@@ -40,9 +40,13 @@ public class CardTrick {
             magicHand[i] = c;
         }
 
+        System.out.println("Your lucky card: 4 of Spades!");
+
         for (int i = 0; i < magicHand.length; i++) {
             if (luckyCard.getSuit().equals(magicHand[i].getSuit()) && luckyCard.getValue() == magicHand[i].getValue()) {
                 System.out.println("You win!");
+            } else if (i == magicHand.length - 1) {
+                System.out.println("You lose!");
             }
         }
 
