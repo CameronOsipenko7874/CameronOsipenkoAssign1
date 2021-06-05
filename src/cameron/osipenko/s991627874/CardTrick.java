@@ -24,8 +24,8 @@ public class CardTrick {
         Scanner input = new Scanner(System.in);
         
         Card luckyCard = new Card();
-        luckyCard.setValue = 4;
-        luckyCard.setSuit = "Spades";
+        luckyCard.setValue(4);
+        luckyCard.setSuit("Spades");
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
