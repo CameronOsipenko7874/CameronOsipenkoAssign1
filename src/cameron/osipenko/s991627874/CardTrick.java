@@ -24,9 +24,15 @@ public class CardTrick {
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
             // c.setValue(insert call to random number generator here)
-            c.setValue(r.nextInt(13) + 1);
-            c.setSuit(Card.SUITS[r.nextInt(3)]);
+            // There is a 12 + 1 as it goes 0-12 and adding one will make range 1-13
+            c.setValue(r.nextInt(12) + 1);
+
             // c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            // Same as above, goes 0-3 for referencing the string array
+            c.setSuit(Card.SUITS[r.nextInt(3)]);
+
+            magicHand[i] = c;
+            System.out.println(magicHand[i].getValue() + " of " + magicHand[i].getSuit());
         }
 
         // insert code to ask the user for Card value and suit, create their card
